@@ -214,3 +214,9 @@ module.exports = {
 };
 
 ```
+
+## VSCode setup
+
+Press Ctrl+Shift+P then enter "select default shell" to access the Terminal default shell configuration and select "WSL Bash".
+
+![](https://msdnshared.blob.core.windows.net/media/2018/04/clip_image011_thumb7.png)
