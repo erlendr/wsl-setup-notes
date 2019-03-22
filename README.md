@@ -5,7 +5,7 @@ Notes for installing WSL
 Powershell:
 ```powershell
 $ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-$ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
+$ (New-Object System.Net.WebClient).DownloadFile("https://aka.ms/wsl-ubuntu-1804", "Ubuntu.appx")
 $ Add-AppxPackage .\Ubuntu.appx
 ```
 
