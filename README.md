@@ -39,7 +39,17 @@ sudo ./install-umbrella-ca.sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-7. Install powerline fonts: https://github.com/powerline/fonts
+7. Install powerline fonts: https://github.com/powerline/fonts:
+
+Clone repo:
+```bash
+$ git clone https://github.com/powerline/fonts.git
+```
+
+Run install script located in the root of the repo via Powershell:
+```powershell
+.\install.ps1
+```
 
 8. Change ZSH Theme to agnoster
 
