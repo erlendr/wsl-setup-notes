@@ -66,18 +66,14 @@ ZSH_THEME="agnoster"
 
 8. Fix ls colours:
 
+Download Solarized Color Theme from https://github.com/seebi/dircolors-solarized
 ```bash
-$ vim ~/.zshrc
+$ curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark --output ~/.dircolors
 ```
 
 ```
 #Change ls colours
-LS_COLORS="ow=01;36;40" && export LS_COLORS
-
-#Make cd use the ls colours
-zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-autoload -Uz compinit
-compinit
+eval `dircolors ~/.dircolors`
 ```
 
 9. Sett opp wsl.conf:
