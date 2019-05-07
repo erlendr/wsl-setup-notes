@@ -235,7 +235,7 @@ module.exports = {
     // Whether to use the WebGL renderer. Set it to false to use canvas-based
     // rendering (slower, but supports transparent backgrounds)
 
-    // ER: Disabled because of ZSH powerline rendering issues: https://github.com/zeit/hyper/issues/3617
+    // ER: Disabled because of ZSH powerline rendering issues: https://github.com/zeit/hyper/issues/3575
     webGLRenderer: false,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
