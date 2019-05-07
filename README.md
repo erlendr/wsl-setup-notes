@@ -106,7 +106,8 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: '"Terminess Powerline", "Anonymice Powerline", "Roboto Mono for Powerline", "Meslo LG S for Powerline", "DejaVu Sans Mono", "Lucida Console", monospace',
+    // ER: Zsh PowerLine
+    fontFamily: '"DejaVu Sans Mono for PowerLine", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -197,10 +198,14 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
+
+    // ER: WSL
     shell: 'C:\\Windows\\System32\\bash.exe',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
+
+    // ER: Start zsh as default WSL shell
     shellArgs: ['-i', '-c', 'zsh', "-i"],
 
     // for environment variables
@@ -217,10 +222,21 @@ module.exports = {
 
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
     // selection is present (`true` by default on Windows and disables the context menu feature)
-    // quickEdit: true,
+    quickEdit: false,
+
+    // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
+    // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
+    // (inside tmux or vim with mouse mode enabled for example).
+    macOptionSelectionMode: 'vertical',
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
+
+    // Whether to use the WebGL renderer. Set it to false to use canvas-based
+    // rendering (slower, but supports transparent backgrounds)
+
+    // ER: Disabled because of ZSH powerline rendering issues: https://github.com/zeit/hyper/issues/3617
+    webGLRenderer: false,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
@@ -231,7 +247,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [],
+  plugins: ['hyper-solarized-dark'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
@@ -242,17 +258,16 @@ module.exports = {
     "tab:new": "ctrl+t",
     "pane:splitVertical": "ctrl+d",
     "pane:splitHorizontal": "ctrl+e",
-    "pane:close": "ctrl+w",
-    "editor:undo": "ctrl+z",
-    "editor:redo": "ctrl+y",
-    "editor:cut": "ctrl+x",
-    "editor:copy": "ctrl+c",
-    "editor:paste": "ctrl+v",
-    "editor:selectAll": "ctrl+a"
-  }
+    "pane:close": "ctrl+w"
+  },
 };
 
 ```
+
+### hyper.is themes
+
+- https://hyper.is/plugins/hyper-oceanic-next
+- https://hyper.is/plugins/hyper-solarized-dark
 
 ## VSCode setup
 
