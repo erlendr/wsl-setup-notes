@@ -87,7 +87,7 @@ $ vim /etc/wsl.conf
 appendWindowsPath = false
 ```
 
-# Hyper.js setup
+# Hyper.js 3.0 setup
 
 `.hyper.js` in Windows home folder:
 
@@ -197,11 +197,11 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: 'C:\\Windows\\System32\\wsl.exe',
+    shell: 'C:\\Windows\\System32\\bash.exe',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: [],
+    shellArgs: ['-i', '-c', 'zsh', "-i"],
 
     // for environment variables
     env: {},
